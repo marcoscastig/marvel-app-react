@@ -8,21 +8,19 @@ export default function Header() {
     const finalCurrentPath = currentPath.pathname.replace("/","");
     const [activeItem, setActiveItem] = useState(finalCurrentPath);
     const navigate = useNavigate();
-    console.log(activeItem);
-
-    const handelItemClick = (e, { name})=>{
+   
+    const handleItemClick = (e, { name})=>{
         
         setActiveItem(name);
 
         navigate(`/${name}`)
-
     }
     return(
         <div className='header-menu'>
             <Menu secondary>
-                <Menu.Item name='inicio' active={activeItem==='inicio'} onClick={handelItemClick} />
-                <Menu.Item name='series' active={activeItem==='series'} onClick={handelItemClick} />
-                <Menu.Item name='comics' active={activeItem==='comics'} onClick={handelItemClick} />
+                <Menu.Item name='inicio' active={activeItem==='inicio'} onClick={handleItemClick} />
+                <Menu.Item name='series' active={activeItem==='series'} onClick={handleItemClick} />
+                <Menu.Item name='comics' active={activeItem==='comics'} onClick={handleItemClick} />
             </Menu>
         </div>
     )

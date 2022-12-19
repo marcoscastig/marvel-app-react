@@ -1,11 +1,11 @@
-
+import BestCharacters from "../components/BestCharacters/BestCharacters";
+import ListLastEvents from "../components/ListLastEvents/ListLastEvents";
 
 export default function Home() {
     return(
         <div>
-            <h1>
-                Desde Home
-            </h1>
+            <BestCharacters/>
+            <ListLastEvents/>
         </div>
     )
 }

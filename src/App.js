@@ -8,7 +8,10 @@ import Comics from './pages/Comics';
 import Error404 from './pages/Error404';
 import Header from './components/Header/Header';
 
+
 function App() {
+
+
   return (
     <div>
       <BrowserRouter>
